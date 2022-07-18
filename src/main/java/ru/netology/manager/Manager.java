@@ -9,10 +9,12 @@ public class Manager {
     private MoviePoster[] films = new MoviePoster[limit - 10];
 
     public Manager(int limit) {
+
         this.limit = limit;
     }
 
     public Manager() {
+
         this.limit = 10;
     }
 
@@ -38,8 +40,8 @@ public class Manager {
 
     public MoviePoster[] findLast() {
         int resultLength = 0;
-        if (limit == 10) {
-            resultLength = 10;
+        if (limit == films.length) {
+            resultLength = films.length;
         } else {
             resultLength = limit;
         }
